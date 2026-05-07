@@ -8,6 +8,10 @@ import os
 # =========================
 DATA_URL = "abfs://dropout-train@nycyellowtaxiea.dfs.core.windows.net/train_data_only1/"
 
+STORAGE_OPTIONS = {
+    "account_name": "nycyellowtaxiea",
+    "account_key": "3tGrImyZ91Ia1ix1HwkPx3D62omphhHw5fa+nEkINgsRZ5a5wnBvI6UzZ7u5LUZhkiKEBT6Gyve5+ASt4+NTOQ=="
+}
 
 _df_cache = None
 
