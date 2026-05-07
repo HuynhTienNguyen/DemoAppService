@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="loader"></div>
+    <p>Running model... please wait...</p>
+</div>
+
+<h1>📊 Dataset Overview</h1>
+
+<div class="card">
+    <p><b>Rows:</b> <span id="num_rows"></span></p>
+    <p><b>Columns:</b> <span id="num_cols"></span></p>
+</div>
+
+<h2>🎯 Target Distribution</h2>
+<canvas id="targetChart"></canvas>
+
+<h2>🧩 Missing Values</h2>
+<table id="missingTable">
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Missing Count</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<hr>
+
+<h1>🤖 Model Evaluation Dashboard</h1>
+
+<button id="runBtn" class="predict-btn" onclick="runEvaluation()">
+    🚀 Run Full Prediction
+</button>
+
+<div class="metrics">
+    <p><b>F1-score:</b> <span id="f1"></span></p>
+    <p><b>ROC-AUC:</b> <span id="roc"></span></p>
+</div>
+
+<h2>📊 Confusion Matrix</h2>
+<canvas id="confusionChart"></canvas>
+
+<h2>🔥 Feature Importance (Top 10)</h2>
+<canvas id="featureChart"></canvas>
+
+<h2>📈 ROC Curve</h2>
+<canvas id="rocChart"></canvas>
+
+<h2>📄 Model Report</h2>
+<div id="report"></div>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
